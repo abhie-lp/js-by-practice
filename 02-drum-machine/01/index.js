@@ -20,11 +20,25 @@ window.addEventListener("load", function() {
         createBubbles(index);
     }))
 
+
+    const shapes = ["circle",
+    "square",
+    "triangle up",
+    "triangle down",
+    "triangle left",
+    "triangle right"]
+
     // function to make bubble transitions
     const createBubbles = (index) => {
         const bubble = document.createElement("div");
+        const shape = shapes[Math.floor(Math.random() * 6)];
+        bubble.className += shape;
         visual.appendChild(bubble);
-        bubble.style.backgroundColor = colors[index];
+        if (shape == "square" || shape == "circle"){
+            bubble.style.background = colors[index];
+        } else {
+            bubble.style.color = colors[index];
+        }
         bubble.style.animation = "jump 1s ease";
 
         // Remove the element as soon as the animation is done
