@@ -83,7 +83,39 @@ header p {
     position: absolute;
     height: 50px;
     width: 50px;
-    border-radius: 50%;
     bottom: 0;
     z-index: -1;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+}
+
+.up {
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid;
+}
+
+.down {
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid;
+}
+
+.left {
+    border-top: 30px solid transparent;
+    border-right: 30px solid;
+    border-bottom: 30px solid transparent;
+}
+
+.right {
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid;
 }
